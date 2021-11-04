@@ -14,7 +14,7 @@ public class ConsignmentGenerator{
         if(carrierName.equals("FreightmateCourierCo")){
             carrierName= "FMCC";
         }else{
-            return "Only available carrier is FreightmateCourierCo. Please try again later."
+            return "Only available carrier is FreightmateCourierCo. Please try again later.";
         }
         
         //numbers three and seven will store the sum of alternate numbers in the consignment index to generate the checksum
@@ -56,7 +56,7 @@ public class ConsignmentGenerator{
         if(cIndex> rangeStart && cIndex <= rangeEnd){
             newIndex= String.format("%0" + digits+ "d", cIndex);
         }else{
-            return "Consignment Index out of range."
+            return "Consignment Index out of range.";
         }
         
         return carrierName+ accNum+ newIndex+ checksum;

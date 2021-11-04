@@ -39,12 +39,12 @@ public class ConsignmentGenerator{
         	newCIndex= newCIndex/10;
         }
         
-
+        int checksum= three+seven;
         
         //convert checksum to string to find the length, then raise 10 to it's power
         //this gives the closest larger base10 number
-        //subtracting the variables three and seven from this base10 number will give checksum
-        int checksum= (int) Math.pow(10, String.valueOf(checksum).length()) - three -seven;
+        //subtracting the calculated checksum from this base10 number will give  the final checksum
+        checksum= (int) Math.pow(10, String.valueOf(checksum).length()) - checksum;
         
         
         //a new string to store formatted consignment index
